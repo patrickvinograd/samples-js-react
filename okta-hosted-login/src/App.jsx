@@ -16,7 +16,8 @@ import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 import { Container } from 'semantic-ui-react';
 import config from './.samples.config';
 import Home from './Home';
-import Messages from './Messages';
+import ServiceHistory from './ServiceHistory';
+import Appeals from './Appeals';
 import Navbar from './Navbar';
 import Profile from './Profile';
 
@@ -28,12 +29,16 @@ class App extends Component {
           issuer={config.oidc.issuer}
           client_id={config.oidc.clientId}
           redirect_uri={config.oidc.redirectUri}
+          authorize_url={config.oidc.authorizeUrl}
+          scope={config.oidc.scope}
+          idp={config.oidc.idp}
         >
           <Navbar />
           <Container text style={{ marginTop: '7em' }}>
             <Route path="/" exact component={Home} />
             <Route path="/implicit/callback" component={ImplicitCallback} />
-            <SecureRoute path="/messages" component={Messages} />
+            <SecureRoute path="/servicehistory" component={ServiceHistory} />
+            <SecureRoute path="/appeals" component={Appeals} />
             <SecureRoute path="/profile" component={Profile} />
           </Container>
         </Security>

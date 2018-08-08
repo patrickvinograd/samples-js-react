@@ -36,17 +36,6 @@ export default withAuth(class Home extends Component {
   }
 
   render() {
-    const resourceServerExamples = [
-      {
-        label: 'Node/Express Resource Server Example',
-        url: 'https://github.com/okta/samples-nodejs-express-4/tree/master/resource-server',
-      },
-      {
-        label: 'Java/Spring MVC Resource Server Example',
-        url: 'https://github.com/okta/samples-java-spring-mvc/tree/master/resource-server',
-      },
-    ];
-
     return (
       <div>
         {this.state.authenticated !== null &&
@@ -60,12 +49,8 @@ export default withAuth(class Home extends Component {
                 Visit the <a href="/profile">My Profile</a> page to take a look inside the ID token.
               </p>
               <h3>Next Steps</h3>
-              <p>Currently this application is a stand-alone front end application.  At this point you can use the access token to authenticate yourself against resource servers that you control.</p>
-              <p>This sample is designed to work with one of our resource server examples.  To see access token authentication in action, please download one of these resource server examples:</p>
-              <ul>
-                {resourceServerExamples.map(example => <li key={example.url}><a href={example.url}>{example.label}</a></li>)}
-              </ul>
-              <p>Once you have downloaded and started the example resource server, you can visit the <a href="/messages">My Messages</a> page to see the authentication process in action.</p>
+              <p>Currently this application is a stand-alone front end application.  At this point you can use the access token to authenticate yourself against certain API Gateway endpoints.</p>
+              <p>Once you have downloaded and started the example resource server, you can visit the <a href="/servicehistory">Service History</a> or <a href="/appeals">Appeals</a> page to see the authentication process in action.</p>
             </div>
           }
           {!this.state.authenticated &&
