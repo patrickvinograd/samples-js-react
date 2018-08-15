@@ -1,7 +1,4 @@
 /*
- * Copyright (c) 2018, Okta, Inc. and/or its affiliates. All rights reserved.
- * The Okta software accompanied by this notice is provided pursuant to the Apache License, Version 2.0 (the "License.")
- *
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
@@ -46,9 +43,9 @@ export default withAuth(class Navbar extends Component {
         <Menu fixed="top" inverted>
           <Container>
             <Menu.Item as="a" header href="/">
-              <Image size="mini" src="/react.svg" />
-              &nbsp;
-              Okta-React Sample Project
+              <Image size="mini" src="/adhoc.png" />
+              &nbsp;&nbsp;
+              Sample VA API App
             </Menu.Item>
             {this.state.authenticated === true && <Menu.Item id="servicehistory-button" as="a" href="/servicehistory">Service History</Menu.Item>}
             {this.state.authenticated === true && <Menu.Item id="appeals-button" as="a" href="/appeals">Appeals</Menu.Item>}

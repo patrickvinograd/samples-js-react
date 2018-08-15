@@ -1,7 +1,4 @@
 /*
- * Copyright (c) 2018, Okta, Inc. and/or its affiliates. All rights reserved.
- * The Okta software accompanied by this notice is provided pursuant to the Apache License, Version 2.0 (the "License.")
- *
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
@@ -48,10 +45,8 @@ export default withAuth(class Profile extends Component {
         <div>
           <Header as="h1"><Icon name="drivers license outline" /> My User Profile (ID Token Claims) </Header>
           <p>
-            Below is the information from your ID token which was obtained during the &nbsp;
-            <a href="https://developer.okta.com/authentication-guide/implementing-authentication/implicit">Implicit Flow</a> and is now stored in local storage.
+            Below is the information from your ID token. This information is shared with this third party application when you sign in.
           </p>
-          <p>This route is protected with the <code>&lt;SecureRoute&gt;</code> component, which will ensure that this page cannot be accessed until you have authenticated.</p>
           <Table>
             <thead>
               <tr>

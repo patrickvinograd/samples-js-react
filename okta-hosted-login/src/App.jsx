@@ -1,7 +1,4 @@
 /*
- * Copyright (c) 2018, Okta, Inc. and/or its affiliates. All rights reserved.
- * The Okta software accompanied by this notice is provided pursuant to the Apache License, Version 2.0 (the "License.")
- *
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
@@ -29,7 +26,6 @@ class App extends Component {
           issuer={config.oidc.issuer}
           client_id={config.oidc.clientId}
           redirect_uri={config.oidc.redirectUri}
-          authorize_url={config.oidc.authorizeUrl}
           scope={config.oidc.scope}
           idp={config.oidc.idp}
         >
