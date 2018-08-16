@@ -7,7 +7,7 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import { withAuth } from '@okta/okta-react';
+import { withAuth } from '@patrickvinograd/okta-react';
 import React, { Component } from 'react';
 import { Header, Message } from 'semantic-ui-react';
 import JSONPretty from 'react-json-pretty';

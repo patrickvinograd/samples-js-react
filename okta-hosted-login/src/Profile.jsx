@@ -8,7 +8,7 @@
  */
 
 import React, { Component } from 'react';
-import { withAuth } from '@okta/okta-react';
+import { withAuth } from '@patrickvinograd/okta-react';
 import { Header, Icon, Table } from 'semantic-ui-react';
 
 import { checkAuthentication } from './helpers';
